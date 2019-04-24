@@ -9,7 +9,7 @@ export default class AddSalesperson extends React.Component {
   submit = event => {
     event.preventDefault();
 
-    axios.post('FUNCTION_PATH_HERE', { name: this.state.name })
+    axios.post('/.netlify/functions/addSalesperson', { name: this.state.name })
       .then(res => {
         console.log(res);
         console.log(res.data);
